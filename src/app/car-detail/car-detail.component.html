@@ -1,0 +1,15 @@
+<div *ngIf="car">
+    <div>
+      <label>Id: </label>{{car.id}} <br>
+    </div>
+    <div>
+      <label for="">Make: </label>{{car.make}} <br>
+    </div>
+    <div>
+      <label for="">Model: </label>{{car.model}} <br>
+    </div>
+    <div>
+      <label for="">Notes: </label>
+      <input [(ngModel)]="car.notes" placeholder="notes">
+    </div>
+  </div>

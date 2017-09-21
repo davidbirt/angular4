@@ -14,19 +14,5 @@
     </ul>
   </div>
   <h3>Selected car: <br></h3>
-  <div *ngIf="selectedCar">
-    <div>
-      <label>Id: </label>{{selectedCar.id}} <br>
-    </div>
-    <div>
-      <label for="">Make: </label>{{selectedCar.make}} <br>
-    </div>
-    <div>
-      <label for="">Model: </label>{{selectedCar.model}} <br>
-    </div>
-    <div>
-      <label for="">Notes: </label>
-      <input [(ngModel)]="selectedCar.notes" placeholder="notes">
-    </div>
-  </div>
+  <car-detail [car]="selectedCar"></car-detail>
 </div>
