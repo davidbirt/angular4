@@ -1,6 +1,9 @@
-# PocApp
-
+# angular4
+angular 4.0 proof of concept
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+
+# Helpful Links
+https://stackoverflow.com/questions/41304626/how-to-deploy-angular-cli-app-on-iis
 
 ## Development server
 
