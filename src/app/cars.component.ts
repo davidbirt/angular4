@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from './car';
 import { CarService } from './car.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,7 +12,10 @@ import { CarService } from './car.service';
 })
 
 export class CarsComponent implements OnInit {
-  constructor(private carService: CarService) { }
+  constructor(
+    private carService: CarService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getCars();
@@ -25,6 +29,9 @@ export class CarsComponent implements OnInit {
   };
   getCars(): void {
     this.carService.getCars().then(cars => this.cars = cars);
+  }
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedCar.id])
   }
 }
 

@@ -9,6 +9,8 @@ import { AppComponent } from './app/app.component';
 import { CarService } from './car.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { AppRoutingModule } from './app-routing.module';
+
 const applicationRoutes = [
   {
     path: 'cars',
@@ -22,6 +24,10 @@ const applicationRoutes = [
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: 'detail/:id',
+    component: CarDetailComponent
   }
 ]
 
@@ -35,9 +41,7 @@ const applicationRoutes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      applicationRoutes
-    )
+    AppRoutingModule
   ],
   providers: [
     CarService
