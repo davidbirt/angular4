@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Car } from '../car';
 import { CARS } from '../car-data';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-manage',
@@ -12,12 +13,11 @@ export class ManageComponent implements OnInit {
   
   newCar = new Car();
 
-  constructor() {
-   }
+  constructor(private carService: CarService) {}
+
   onSubmit(car: Car) {
     console.log(this.newCar);
-    CARS.push(this.newCar);
-
+    this.carService.addCar(this.newCar);
   }
 
   ngOnInit() {

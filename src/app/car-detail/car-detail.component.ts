@@ -27,6 +27,10 @@ export class CarDetailComponent implements OnInit {
       .subscribe(car => this.car = car)
   }
 
+  remove(): void {
+    this.carService.deleteCar(this.car);
+  }
+
   goBack(): void {
     this.location.back();
   }
