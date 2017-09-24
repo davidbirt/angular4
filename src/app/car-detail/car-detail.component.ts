@@ -29,6 +29,7 @@ export class CarDetailComponent implements OnInit {
 
   remove(): void {
     this.carService.deleteCar(this.car);
+    this.goBack();
   }
 
   goBack(): void {
