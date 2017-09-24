@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { CarsComponent } from './cars.component';
@@ -8,6 +7,7 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
 import { AppComponent } from './app/app.component';
 import { CarService } from './car.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ManageComponent } from './manage/manage.component';
 
 const applicationRoutes = [
   {
@@ -26,6 +26,10 @@ const applicationRoutes = [
   {
     path: 'detail/:id',
     component: CarDetailComponent
+  },
+  {
+      path: 'manage',
+      component: ManageComponent
   }
 ]
 
